@@ -1,0 +1,233 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-12-19 18:18+0000\n"
+"PO-Revision-Date: 2014-11-18 18:20+0100\n"
+"Last-Translator: Jan Ptacek <jan.ptacek@gmail.com>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 1.6.7\n"
+"Language: hr\n"
+
+
+msgid "Hello World"
+msgstr "Pozdrav Svijete"
+
+msgid "Log In"
+msgstr "Prijavi se"
+
+msgid "Login"
+msgstr "Prijava"
+
+msgid "Logout"
+msgstr "Odjava"
+
+msgid "Password"
+msgstr "Lozinka"
+
+msgid "Username"
+msgstr "Korisničko ime"
+
+msgid "Name"
+msgstr "Ime"
+
+msgid "Surname"
+msgstr "Prezime"
+
+msgid "Create"
+msgstr "Kreiraj"
+
+msgid "Save"
+msgstr "Spremi"
+
+msgid "Edit"
+msgstr "Izmijeni"
+
+msgid "Add"
+msgstr "Dodaj"
+
+msgid "Add user"
+msgstr "Kreiraj korisnika"
+
+msgid "Edit user"
+msgstr "Izmijeni korisnika"
+
+msgid "Add group"
+msgstr "Kreiraj grupu"
+
+msgid "The user could not be saved. Please, try again."
+msgstr "Došlo je do greške prilikom spremanja. Pokušajte ponovno."
+
+msgid "Club"
+msgstr "Klub"
+
+msgid "User"
+msgstr "Korisnik"
+
+msgid "Clubs"
+msgstr "Klubovi"
+
+msgid "Create new club"
+msgstr "Kreiraj novi klub"
+
+msgid "Users"
+msgstr "Korisnici"
+
+msgid "Permissions"
+msgstr "Dozvole"
+
+msgid "Saved"
+msgstr "Spremljeno"
+
+msgid "Deleted"
+msgstr "Obrisano"
+
+msgid "Error"
+msgstr "Greška"
+
+msgid "User successfully saved."
+msgstr "Korisnik uspješno spremljen."
+
+msgid "Error while saving. Please contact your Administrator."
+msgstr "Greška prilikom spremanja. Molim kontaktirajte administratora."
+
+msgid "Are you sure?"
+msgstr "Jeste li sigurni?"
+
+msgid "Delete club "
+msgstr "Obrisati klub "
+
+msgid "Delete user "
+msgstr "Obrisati korisnika "
+
+msgid "Members"
+msgstr "Članovi"
+
+msgid "Remove"
+msgstr "Makni"
+
+msgid "Yes"
+msgstr "Da"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "Please select a user"
+msgstr "Molimo odaberite korisnika"
+
+msgid "Competition"
+msgstr "Natjecanje"
+
+msgid "Competitions"
+msgstr "Natjecanja"
+
+msgid "Create new competition"
+msgstr "Kreiraj novo natjecanje"
+
+msgid "Title"
+msgstr "Naziv"
+
+msgid "Alliances"
+msgstr "Savezi"
+
+msgid "Alliance"
+msgstr "Savez"
+
+msgid "Events"
+msgstr "Događaji"
+
+msgid "Event"
+msgstr "Događaj"
+
+msgid "Starts"
+msgstr "Počinje"
+
+msgid "Ends"
+msgstr "Završava"
+
+msgid "Donors"
+msgstr "Donori"
+
+msgid "Create new donor"
+msgstr "Unesi novog donora"
+
+msgid "Address"
+msgstr "Adresa"
+
+msgid "Contact name"
+msgstr "Ime kontakta"
+
+msgid "Contact address"
+msgstr "Adresa kontakta"
+
+msgid "Contact mail"
+msgstr "Mail kontakta"
+
+msgid "Contact number"
+msgstr "Broj kontakta"
+
+msgid "Gender"
+msgstr "Spol"
+
+msgid "Date of birth"
+msgstr "Datum rođenja"
+
+msgid "Home"
+msgstr "Početna"
+
+msgid "Donor successfully saved."
+msgstr "Donor uspješno spremljen."
+
+msgid "Male"
+msgstr "Muško"
+
+msgid "Female"
+msgstr "Žensko"
+
+msgid "Settings"
+msgstr "Postavke"
+
+msgid "Search"
+msgstr "Pretraga"
+
+msgid "New"
+msgstr "Novi"
+
+msgid "Clinics"
+msgstr "Ambulante"
+
+msgid "Vets"
+msgstr "Veterinari"
+
+msgid "Weight"
+msgstr "Težina"
+
+msgid "Age"
+msgstr "Godine"
+
+msgid "Language"
+msgstr "Jezik"
+
+msgid "Vaccinated"
+msgstr "Cijepljen"
+
+msgid "Microchipped"
+msgstr "Čipiran"
+
+msgid "Donations"
+msgstr "Donacije"
+
+msgid "Donated"
+msgstr "Donirao"
+
+msgid "Please select a donor"
+msgstr "Molimo odaberite donora"
+
+msgid "Event successfully saved."
+msgstr "Događaj uspješno spremljen."

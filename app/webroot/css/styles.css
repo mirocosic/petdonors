@@ -1,0 +1,119 @@
+html,body {
+    height:100%;
+}
+
+.treelist-with-nav  .x-panel-body {
+    background-color: #32404e;
+}
+
+.fa-building:before {
+    content: "\f015" !important;
+    background-image: none !important;
+}
+
+.fa-list-alt:before {
+     content: "\f022" !important;
+    background-image: none !important;
+}
+
+.fa-medkit:before {
+     content: "\f0fa" !important;
+    background-image: none !important;
+}
+
+.fa-hospital:before {
+    content: "\f0f8" !important;
+    background-image: none !important;
+}
+
+.fa-user-md:before {
+    content: "\f0f0" !important;
+    background-image: none !important;
+}
+
+.fa-tint:before {
+    content: "\f043" !important;
+    background-image: none !important;
+}
+
+.fa-search:before {
+    content: "\f002" !important;
+    background-image: none !important;
+}
+
+.fa-plus:before {
+    content: "\f067" !important;
+    background-image: none !important;
+}
+
+
+.fa-cogs:before {
+    content: "\f085" !important;
+    //font-size:1.2em;
+    background-image: none !important;
+}
+
+.fa-sign-out:before {
+    content: "\f08b" !important;
+    background-image: none !important;
+}
+
+.menuTree .x-treelist-item-expander:after {
+    content: "\f0da";
+    font: 16px/1 FontAwesome;
+}
+
+.x-grid-tree-node-expanded .x-tree-elbow-plus:before, .x-grid-tree-node-expanded .x-tree-elbow-end-plus:before {
+    content: "\f0d7";
+    font-size: 20px;
+}
+.x-tree-elbow-plus:before, .x-tree-elbow-end-plus:before {
+    content: "\f0da";
+    font-size: 20px;
+}
+
+.menuTree .x-tree-expander {
+    right: 0;
+    position: absolute;
+    color: inherit;
+}
+
+
+.menuTree .x-grid-body {
+    background-color: #32404e;
+    
+}
+
+.menuTree .x-grid-cell-inner {
+    transition: color 0.3s;
+    color: #ADB3B8;
+    background-color: #32404e;
+}
+.menuTree .x-grid-cell-inner:hover {
+    color: white;
+    cursor:pointer;
+}
+
+.menuTree .x-grid-cell-inner a{
+   
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.menuTree .x-tree-icon {
+   // transition: color 0.3s;
+   color:inherit;
+}
+
+.myTitleClass .x-panel-header {
+    background-color: #42719a;
+}
+
+.MainTitle .x-title{
+    font-size: 20px;
+}
+
+
+     
+            
