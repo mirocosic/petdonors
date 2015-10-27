@@ -231,3 +231,12 @@ msgstr "Molimo odaberite donora"
 
 msgid "Event successfully saved."
 msgstr "Događaj uspješno spremljen."
+
+msgid "Clinic"
+msgstr "Ambulanta"
+
+msgid "Actions"
+msgstr "Akcije"
+
+msgid "Create new action with these donors?"
+msgstr "Kreirati novu akciju sa ovim donorima?"

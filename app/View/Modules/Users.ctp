@@ -6,7 +6,12 @@ var usersStore = Ext.create('Ext.data.Store',{
         {name:'User.surname',mapping:'User.surname'},
         {name:'User.mail',mapping:'User.mail'},
         {name:'User.username',mapping:'User.username'},
-        {name:'User.oib',mapping:'User.oib'}
+        {name:'User.oib',mapping:'User.oib'},
+        {name:'Clinic.id',mapping:'Clinic[0].id'},
+        {name:'Clinic.name',mapping:'Clinic[0].name'},
+        {name:'ClinicMembership.id',mapping:'ClinicMembership[0].id'},
+        {name:'ClinicMembership.clinic_id',mapping:'ClinicMembership[0].clinic_id'},
+        
 
     ],
     proxy: {
@@ -17,6 +22,22 @@ var usersStore = Ext.create('Ext.data.Store',{
         type:'json'
     },
      autoLoad: true
+});
+
+var clinicsStore = Ext.create('Ext.data.Store',{
+    fields: [
+        {name:'Clinic.id',mapping:'Clinic.id'},
+        {name:'Clinic.name',mapping:'Clinic.name'},
+        {name:'Clinic.address',mapping:'Clinic.address'}
+    ],
+    proxy: {
+        type:'ajax',
+        url:'/clinics/getClinics'
+    },
+    reader: {
+        type:'json'
+    },
+    autoLoad: true
 });
 
 var usersTab = new Ext.panel.Panel({
@@ -32,7 +53,7 @@ var usersTab = new Ext.panel.Panel({
                 {header:'<?=__("Mail");?>',dataIndex:'User.mail'},
                 {header:'<?=__("Username");?>',dataIndex:'User.username'},
                 {header:'<?=__("OIB");?>',dataIndex:'User.oib'},
-               
+                {header:'<?=__("Clinic");?>',dataIndex:'Clinic.name'},
                 {
                    
                     align: 'center',
@@ -79,6 +100,20 @@ var usersTab = new Ext.panel.Panel({
                                         name:'User.password',
                                         fieldLabel:"<?=__('Password');?>",
                                         allowBlank: true
+                                    },{
+                                        name:'ClinicMembership.id',
+                                        fieldLabel:"<?=__('ClinicMembership');?>",
+                                        allowBlank: true,
+                                        hidden:true
+                                
+                                    },{
+                                        xtype:'combobox',
+                                        
+                                        store:clinicsStore,
+                                        displayField:"Clinic.name",
+                                        valueField:'Clinic.id',
+                                        name:'ClinicMembership.clinic_id',
+                                        fieldLabel:"<?=__('Clinic');?>",
                                     },{
                                         name:"User.oib",
                                         fieldLabel:"<?=__('OIB');?>",

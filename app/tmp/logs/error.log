@@ -12584,3 +12584,379 @@ Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
 Stack Trace:
 #0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-10-27 18:06:22 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 18:06:22 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 18:06:23 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 18:06:23 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 18:19:02 Error: [MissingControllerException] Controller class Do7Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Do7Controller',
+  'plugin' => NULL,
+)
+Request URL: /do7
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 18:19:02 Error: [MissingControllerException] Controller class Do7Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Do7Controller',
+  'plugin' => NULL,
+)
+Request URL: /do7
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:10:39 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:10:39 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:10:40 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:10:40 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:13:15 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973195283
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:13:15 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973195283
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:13:38 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:13:38 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:13:38 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:13:38 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:13:40 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973220551
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:13:40 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973220551
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:15:14 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973314489
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:15:14 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973314489
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:16:48 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973408810
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:16:48 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973408810
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:17:20 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973439952
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:17:20 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973439952
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:17:36 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973456617
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:17:36 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973456617
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:18:42 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973522368
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:18:42 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973522368
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:18:54 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973534368
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:18:54 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973534368
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:19:04 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973544232
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:19:04 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973544232
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:19:13 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973553808
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:19:13 Error: [MissingControllerException] Controller class .jsController could not be found.
+Exception Attributes: array (
+  'class' => '.jsController',
+  'plugin' => NULL,
+)
+Request URL: /.js?_dc=1445973553808
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:20:54 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:20:54 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:20:54 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:20:54 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-27 20:31:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /events/createEvent
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('INSERT INTO `pe...', Array)
+#2 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Datasource\DboSource.php(1020): DboSource->execute('INSERT INTO `pe...')
+#3 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Model.php(1928): DboSource->create(Object(EventMembership), Array, Array)
+#4 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Model.php(1745): Model->_doSave(Array, Array)
+#5 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Model.php(2501): Model->save(Array, Array)
+#6 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\Controller\EventsController.php(152): Model->saveAll(Array)
+#8 [internal function]: EventsController->createEvent()
+#9 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#12 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-10-27 20:31:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /events/createEvent
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('INSERT INTO `pe...', Array)
+#2 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Datasource\DboSource.php(1020): DboSource->execute('INSERT INTO `pe...')
+#3 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Model.php(1928): DboSource->create(Object(EventMembership), Array, Array)
+#4 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Model.php(1745): Model->_doSave(Array, Array)
+#5 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Model.php(2501): Model->save(Array, Array)
+#6 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Model\Model.php(2273): Model->saveAssociated(Array, Array)
+#7 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\Controller\EventsController.php(152): Model->saveAll(Array)
+#8 [internal function]: EventsController->createEvent()
+#9 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#12 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

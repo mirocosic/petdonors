@@ -21,6 +21,12 @@ html,body {
     background-image: none !important;
 }
 
+.fa-flash:before {
+     content: "\f0e7" !important;
+    background-image: none !important;
+}
+
+
 .fa-hospital:before {
     content: "\f0f8" !important;
     background-image: none !important;

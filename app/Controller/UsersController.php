@@ -73,6 +73,15 @@
         $saveData['User']['username'] = trim($this->request->data['User_username']);
         $saveData['User']['oib'] = trim($this->request->data['User_oib']);
         
+        $save['ClinicMembership']['id'] = $this->request->data['ClinicMembership_id'];
+        $save['ClinicMembership']['user_id'] = $this->request->data['User_id'];
+        $save['ClinicMembership']['clinic_id'] = $this->request->data['ClinicMembership_clinic_id'];
+        
+        
+        $this->ClinicMembership->save($save);
+        // return json_encode($this->request->data);
+        
+        
         if (!empty($this->request->data['User_password'])){
             App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
             $passwordHasher = new BlowfishPasswordHasher();
@@ -80,6 +89,7 @@
            $saveData['User']['password'] = $passwordHasher->hash($this->request->data['User_password']);
         }
         
+       
         
         if ($this->User->saveAll($saveData)){
             $response['success'] = true;
@@ -104,8 +114,9 @@
         $this->autoRender = false;
         
         $users = $this->User->find('all',[
-            'fields'=>['User.id','User.username','User.name','User.surname','User.mail','User.oib']
+           // 'fields'=>['User.id','User.username','User.name','User.surname','User.mail','User.oib']
         ]);
+       
        
         return json_encode($users);
         

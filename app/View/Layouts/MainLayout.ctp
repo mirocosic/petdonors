@@ -95,8 +95,8 @@ Ext.onReady(function() {
                         leaf: true
                     }]
                 },{
-                    text:'<?=__('Donations');?>',
-                    iconCls:'fa-medkit',
+                    text:'<?=__('Actions');?>',
+                    iconCls:'fa-flash',
                     expanded:false,
                     leaf:false,
                     href:'/events'
@@ -106,10 +106,12 @@ Ext.onReady(function() {
                     iconCls: 'fa-tint',
                     expanded:false,
                     leaf:false,
+                    href:'/donors',
                     children: [{
                         text: '<?=__('Search');?>',
                         iconCls:'fa-search',
-                        leaf: true // this is a leaf node. It can't have children. Sad! :-(   
+                        leaf: true,
+                        href:'/donors'
                     }, {
                         text: '<?=__('New');?>',
                         iconCls:'fa-plus',

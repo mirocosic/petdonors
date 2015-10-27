@@ -61,9 +61,8 @@ var trueStore = Ext.create('Ext.data.Store', {
 var donorsGrid = new Ext.grid.GridPanel({
         title: '<?= __("Donors");?>',
         glyph: 'xf043@FontAwesome',
-          
-            plugins: 'gridfilters',
-            store:donorsStore,
+        plugins: 'gridfilters',
+        store:donorsStore,
            
             columns: [
                 {header:'Id',dataIndex:'Donor.id',width:50},
@@ -353,6 +352,21 @@ var donorsGrid = new Ext.grid.GridPanel({
                 }
                             
             ],
+            tbar:[{
+                xtype:'button',
+                text:'<?=__("Create donor");?>',
+                glyph:'xf067@FontAwesome',
+            },{
+                xtype:'button',
+                text:'<?=__("Create action");?>',
+                glyph:'xf067@FontAwesome',
+                handler:function(){
+                    //Ext.Msg.confirm('<?=__('Are you sure?');?>','<?=__("Create new action with these donors?");?>',createAction)
+                    Ext.MessageBox.prompt('<?=__('Create new action');?>','<?=__("Title");?>',createAction);
+                }
+            }
+                
+            ],
             dockedItems: [{
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',
@@ -454,3 +468,38 @@ var donorsTab = new Ext.Panel({
 }
         ]
     });
+    
+function createAction(btn,title){
+  
+   if (btn == 'ok'){
+       var data = donorsStore.getRange();
+       var donor_ids = [];
+       donorsStore.each(function(record){
+          // console.log(record['data']['Donor']['id']);
+           donor_ids.push(record['data']['Donor']['id']);
+       });
+        Ext.Ajax.request({
+            url:'/events/createEvent',
+            scope:this,
+            params:{
+                donor_ids: Ext.encode(donor_ids),
+                event_title : title
+            },
+            success:function(response,c){
+                var r = Ext.decode(response.responseText);
+
+                if(r.success !== 'false'){
+                   
+                }
+
+                
+            },
+            failure:function() {
+               
+            }
+        });
+   } else {
+       
+   }
+   
+}

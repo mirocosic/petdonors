@@ -18,8 +18,6 @@ var eventsStore = Ext.create('Ext.data.Store',{
      autoLoad: true
 });
 
-
- 
 var donorsStore = Ext.create('Ext.data.Store',{
     fields:[
         {name:'Donor.id',mapping:'Donor.id'},
@@ -53,8 +51,8 @@ var eventsDonorsStore = Ext.create('Ext.data.Store',{
 })
 
 var eventsTab = Ext.create('Ext.panel.Panel',{
-    title:"<?=__('Donations');?>",
-    glyph:'xf0fa@FontAwesome',
+    title:"<?=__('Actions');?>",
+    glyph:'xf0e7@FontAwesome',
     items:[{
         xtype:"grid",
         store: eventsStore,

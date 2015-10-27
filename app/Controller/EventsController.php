@@ -23,7 +23,7 @@
         
     }
     
-     function getEventDonors(){
+    function getEventDonors(){
         if (empty($this->request->query['event_id'])){
             return json_encode(array('success'=>false,'message'=>'Event id empty'));
         }
@@ -38,7 +38,7 @@
         
     }
     
-      function addDonor(){
+    function addDonor(){
         if (empty($this->request->data['event_id']) || empty($this->request->data['donor_id'])){
             $response['success'] = false;
             $response['message'] = __('Please select a donor');
@@ -137,5 +137,27 @@
        $result =  $this->Event->find('all');
        
        debug($result);
+    }
+    
+    function createEvent(){
+        $this->layout = false;
+        $this->autoRender = false;
+        
+        $this->Event->create();
+        $data['Event']['title'] = $this->request->data['event_title'];
+        $this->Event->save($data);
+        
+        $donor_ids = json_decode($this->request->data['donor_ids']);
+        foreach($donor_ids as $id){
+            $saveData['EventMembership']['event_id'] = $this->Event->id;
+            $saveData['EventMembership']['donor_id'] = $id;
+            $this->EventMembership->saveAll($saveData);
+        }
+        
+       
+        
+        return $this->request->data['donor_ids'];
+        
+       // return json_encode($this->request->data['donor_ids']);
     }
 }
