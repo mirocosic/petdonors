@@ -364,6 +364,46 @@ var donorsGrid = new Ext.grid.GridPanel({
                     //Ext.Msg.confirm('<?=__('Are you sure?');?>','<?=__("Create new action with these donors?");?>',createAction)
                     Ext.MessageBox.prompt('<?=__('Create new action');?>','<?=__("Title");?>',createAction);
                 }
+            },{
+                xtype:'button',
+                glyph:'xf041@FontAwesome',
+                handler:function(){
+                    
+                    var mapwin = Ext.create('Ext.window.Window', {
+                            autoShow: true,
+                            layout: 'fit',
+                            title: '<?=__("Donors map");?>',
+                            glyph:'xf041@FontAwesome',
+                            closeAction: 'destroy',
+                            width:750,
+                            height:550,
+                            border: true,
+                           
+                            items: {
+                                xtype: 'gmappanel',
+                                id : 'donorsMap',
+                                center: {
+                                    geoCodeAddr: 'Stjepana Ljubića Vojvode 18, Zagreb',
+                                    marker: {title: 'Home'}
+                                },
+                               
+                                mapOptions : {
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                }
+                                
+                            },
+                           
+                        });
+                    var data = donorsStore.getRange();
+                    var donors = [];
+                    donorsStore.each(function(record){
+                       // console.log(record['data']['Donor']['id']);
+                        donors.push(record['data']['Donor']);
+                    });    
+                   // var donors = new Array('Anićeva 14, Zagreb');
+                    drawMarkers(donors); 
+                    
+                }
             }
                 
             ],
@@ -382,6 +422,56 @@ var donorsGrid = new Ext.grid.GridPanel({
             
         });
 
+function drawMarkers(donors) {
+    var geocoder = new google.maps.Geocoder();
+    var donorsMap = Ext.getCmp('donorsMap');
+    //console.log(donorsMap);
+    
+    Ext.each(donors, function(donor, index){
+     //console.log(donor.address);
+       
+        geocoder.geocode({'address': donor.address}, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            //console.log(results[0].geometry.location);
+            
+            var infowindow = new google.maps.InfoWindow({
+                content: 
+                    '<div style="font-size: 0.9em;">'+
+                        '<b><?=__('Name');?></b>: '+donor.name+'<br/>'+
+                        '<b><?=__('Address');?></b>: '+donor.address+'<br/>'+
+                        '<b><?=__('Contact name');?></b>: '+donor.contact_name+'<br/>'+
+                        '<b><?=__('Contact number');?></b>: '+donor.contact_number+'<br/>'+
+                    '</div>'
+                     
+              });
+              
+            var marker = new google.maps.Marker({
+                title: 'Hello World!',
+                position: results[0].geometry.location,
+                map:donorsMap.gmap
+            });
+           
+            marker.addListener('click', function() {
+                infowindow.open(donorsMap.gmap, marker);
+            });
+          
+          //  donorsMap.addMarker(marker);
+            
+            //donorsMap.setCenter(results[0].geometry.location);
+        /*    var marker = new google.maps.Marker({
+              map: donorsMap,
+              position: results[0].geometry.location
+            });
+            */
+          } else {
+            //alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+        
+    });
+
+ 
+}
 
 var donorsTab = new Ext.Panel({
         title: '<?= __("Donors");?>',

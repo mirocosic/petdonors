@@ -8,14 +8,9 @@
         <!-- load ExtJS -->
         <script src="/js/ext/ext-all.js"></script>
         
-        <!-- load ExtJS grid filters -->
-        <?php
-
-
-
-        // include ALL JS files from UX folder
-        echo $this->ScriptInclude->includeScriptFolder("ext.ux/Components/grid");
-        ?>
+        <!-- load External plugins / libraries -->
+        <script src="/js/ext.ux/GMapPanel.js"></script>
+       <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
         
         <!-- load Theme Triton -->
         <script src="/ext-themes/theme-triton/theme-triton.js"></script>
@@ -26,6 +21,8 @@
         
         <!-- load custom css overrides -->
         <link rel="stylesheet" href="/css/styles.css"/>
+        
+        
         
     </head>
     <body>
@@ -63,7 +60,10 @@
     <?= $this->Html->script('/Modules/get/Donors');?>
     -->
    <script type='text/javascript'>
-    
+    Ext.require([
+       
+       // 'Ext.ux.GMapPanel'
+    ]);
 Ext.onReady(function() {
     
     Ext.define('Test', {

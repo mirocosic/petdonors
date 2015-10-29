@@ -240,3 +240,6 @@ msgstr "Akcije"
 
 msgid "Create new action with these donors?"
 msgstr "Kreirati novu akciju sa ovim donorima?"
+
+msgid "Donors map"
+msgstr "Karta donora"
