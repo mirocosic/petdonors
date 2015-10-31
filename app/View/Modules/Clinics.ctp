@@ -3,7 +3,10 @@ var clinicsStore = Ext.create('Ext.data.Store',{
     fields: [
         {name:'Clinic.id',mapping:'Clinic.id'},
         {name:'Clinic.name',mapping:'Clinic.name'},
-        {name:'Clinic.address',mapping:'Clinic.address'}
+        {name:'Clinic.address',mapping:'Clinic.address'},
+        {name:'Clinic.city',mapping:'Clinic.city'},
+        {name:'Clinic.latitude',mapping:'Clinic.latitude'},
+        {name:'Clinic.longitude',mapping:'Clinic.longitude'}
     ],
     proxy: {
         type:'ajax',
@@ -52,16 +55,16 @@ var clinicMembersStore = Ext.create('Ext.data.Store',{
     }
 });
 
- var clinicsTab = new Ext.panel.Panel({
+ var clinicsGrid = new Ext.grid.GridPanel({
         title:"<?=__('Clinics');?>",
         glyph:"xf0f8@FontAwesome",
-        items:[{
-            xtype:'grid',
+        
             store:clinicsStore,
             columns:[
                 {header:'ID',dataIndex:'Clinic.id',width:50},
                 {header:"<?=__('Name');?>",dataIndex:'Clinic.name'},
                 {header:"<?=__('Address');?>",dataIndex:'Clinic.address'},
+                {header:"<?=__('City');?>",dataIndex:'Clinic.city'},
                 {   stopSelection: true,
                     xtype: 'widgetcolumn',
                     width:120,
@@ -93,21 +96,45 @@ var clinicMembersStore = Ext.create('Ext.data.Store',{
                                     },{
                                         fieldLabel:"<?=__('Address');?>",
                                         name: 'Clinic.address'    
-                                    }],
+                                    },{
+                                        fieldLabel:"<?=__('City');?>",
+                                        name: 'Clinic.city'    
+                                    },{
+                                        name: 'Clinic.latitude',
+                                        hidden: true,
+                                        value:'0'
+                                    },{
+                                        name: 'Clinic.longitude',
+                                        hidden: true,
+                                        value:'0'
+                                    },],
                                     buttons:[{
                                         formBind: true,
                                         text:"<?=__('Save');?>",
                                         handler: function(){
-                                            clinicEditWindow.items.get('clinicDataForm').getForm().submit({
-                                                url: '/clinics/edit',
-                                                success: function (form, action) {
-                                                    Ext.Msg.alert("<?=__('Saved');?>", action.result.message);
-                                                    clinicsStore.load();  
-                                                    clinicEditWindow.close();
-                                                },
-                                                failure: function (form, action) {
-                                                    Ext.Msg.alert("<?=__('Error');?>", action.result.message);
+                                           
+                                            var geocoder = new google.maps.Geocoder();
+                                            var clinicForm = clinicEditWindow.items.get('clinicDataForm');
+                                            var address = clinicForm.down('[name=Clinic.address]').getValue();
+                                            geocoder.geocode({'address': address}, function(results, status) {
+                                                if (status === google.maps.GeocoderStatus.OK) {
+
+                                                    clinicForm.down('[name=Clinic.latitude]').setValue(results[0].geometry.location.lat());
+                                                    clinicForm.down('[name=Clinic.longitude]').setValue(results[0].geometry.location.lng());
+                                                } else {
+                                                   // do something smart
                                                 }
+                                                clinicEditWindow.items.get('clinicDataForm').getForm().submit({
+                                                    url: '/clinics/edit',
+                                                    success: function (form, action) {
+                                                        Ext.Msg.alert("<?=__('Saved');?>", action.result.message);
+                                                        clinicsStore.load();  
+                                                        clinicEditWindow.close();
+                                                    },
+                                                    failure: function (form, action) {
+                                                        Ext.Msg.alert("<?=__('Error');?>", action.result.message);
+                                                    }
+                                                });
                                             });
                                         }
                                     },{
@@ -276,57 +303,167 @@ var clinicMembersStore = Ext.create('Ext.data.Store',{
                     }
                 }
                 
-            ]
-        },{
-            xtype:'button',
-            margin: '20 0 0 20',
-            text:"<?=__('Create');?>",
-            glyph:'xf067@FontAwesome',
-            handler:function(){
-                var clinicEditWindow = Ext.create('Ext.window.Window',{
-                    title:"<?=__('Create new clinic');?>",
-                    width: 300,
-                    items: [{
-                        xtype:"form",
-                        id:"clinicDataForm",
-                        defaults: {
-                            xtype:'textfield',
-                            padding: "10 10 0 10",
-                            allowBlank: false
-                        },
-                        items:[{
-                            fieldLabel:"<?=__('Name');?>",
-                            name: 'Clinic.name'    
-                        },{
-                            fieldLabel:"<?=__('Address');?>",
-                            name: 'Clinic.address'    
-                        }],
-                        buttons:[{
-                            formBind: true,
-                            text:"<?=__('Save');?>",
-                            handler: function(){
-                                clinicEditWindow.items.get('clinicDataForm').getForm().submit({
-                                    url: '/clinics/edit',
-                                    success: function (form, action) {
-                                        Ext.Msg.alert("<?=__('Saved');?>", action.result.message);
-                                        clinicsStore.load();  
-                                        clinicEditWindow.close();
-                                    },
-                                    failure: function (form, action) {
-                                        Ext.Msg.alert("<?=__('Error');?>", action.result.message);
-                                    }
-                                });
-                            }
-                        },{
-                            text:"<?=__('Delete');?>"
+            ],
+            tbar:[{
+                xtype:'button',
+                text:'<?=__("New clinic");?>',
+                glyph:'xf067@FontAwesome',
+                handler:function(){
+                    var clinicEditWindow = Ext.create('Ext.window.Window',{
+                        title:"<?=__('Create new clinic');?>",
+                        width: 300,
+                        autoShow: true,
+                        items: [{
+                            xtype:"form",
+                            id:"clinicDataForm",
+                            defaults: {
+                                xtype:'textfield',
+                                padding: "10 10 0 10",
+                                allowBlank: false
+                            },
+                            items:[{
+                                fieldLabel:"<?=__('Name');?>",
+                                name: 'Clinic.name'    
+                            },{
+                                fieldLabel:"<?=__('Address');?>",
+                                name: 'Clinic.address'    
+                            },{
+                                
+                                name: 'Clinic.latitude',
+                                hidden: true,
+                                value:'0'
+                            },{
+                               
+                                name: 'Clinic.longitude'   ,
+                                hidden: true,
+                                value:'0'
+                            }],
+                            buttons:[{
+                                formBind: true,
+                                text:"<?=__('Save');?>",
+                                handler: function(){
+                                    
+                                    // add geocodeing function
+                                    var geocoder = new google.maps.Geocoder();
+                                    var clinicForm = clinicEditWindow.items.get('clinicDataForm');
+                                    var address = clinicForm.down('[name=Clinic.address]').getValue();
+                                    geocoder.geocode({'address': address}, function(results, status) {
+                                        if (status === google.maps.GeocoderStatus.OK) {
+                                            
+                                            clinicForm.down('[name=Clinic.latitude]').setValue(results[0].geometry.location.lat());
+                                            clinicForm.down('[name=Clinic.longitude]').setValue(results[0].geometry.location.lng());
+                                        } else {
+                                                
+                                        }
+                                        clinicEditWindow.items.get('clinicDataForm').getForm().submit({
+                                            url: '/clinics/edit',
+                                            success: function (form, action) {
+                                                Ext.Msg.alert("<?=__('Saved');?>", action.result.message);
+                                                clinicsStore.load();  
+                                                clinicEditWindow.close();
+                                            },
+                                            failure: function (form, action) {
+                                                Ext.Msg.alert("<?=__('Error');?>", action.result.message);
+                                            }
+                                        });
+                                        
+                                    });
+                                    
+                                }
+                            },{
+                                text:"<?=__('Delete');?>"
+                            }]
+
                         }]
+                     });
 
-                    }]
-                 });
-
-               // clinicEditWindow.items.get('clinicDataForm').getForm().loadRecord(record);
-                clinicEditWindow.show();
-            }
-        }]
+                }
+            },{
+                // show clinic map
+                xtype:'button',
+                glyph:'xf041@FontAwesome',
+                handler:function(){
+                    var mapwin = Ext.create('Ext.window.Window', {
+                            autoShow: true,
+                            layout: 'fit',
+                            title: '<?=__("Clinics map");?>',
+                            glyph:'xf041@FontAwesome',
+                            closeAction: 'destroy',
+                            width:750,
+                            height:550,
+                            border: true,
+                            items: {
+                                xtype: 'gmappanel',
+                                id : 'clinicsMap',
+                                center: {
+                                    geoCodeAddr: 'Stjepana Ljubića Vojvode 18, Zagreb',
+                                    marker: {title: 'Home'}
+                                },
+                                mapOptions : {
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                },
+                                 listeners : {
+                                    idle:function(){
+                                       
+                                         
+                                    }
+                                },
+                            }
+                        });
+                        
+                    var clinics = [];
+                    clinicsStore.each(function(record){
+                        clinics.push(record['data']['Clinic']);
+                    });    
+                    //ovo je ruzno i treba popraviti, okinuti na neki load event od gmaps
+                    Ext.defer(function(){drawClinicMarkers(clinics);},500);
+                                        
+                   
+                }
+            }],
+            dockedItems: [{
+                xtype: 'pagingtoolbar',
+                dock: 'bottom',
+                //plugins: {ptype: 'pagesize', displayText: 'Donora po stranici'},
+                //pageSize: 10,
+                beforePageText: 'Stranica',
+                afterPageText: 'od {0}',
+                store: clinicsStore,
+                displayInfo: true,
+                displayMsg: '<?=__('Donori {0} - {1} of {2}')?>',
+                emptyMsg: "<?=__('Nema donora')?>"
+            }]
     });
+    
+function drawClinicMarkers(clinics) {
+    var clinicsMap = Ext.getCmp('clinicsMap');
+   
+    Ext.each(clinics, function(clinic, index){
+        if(clinic.latitude == 0){
+            return;
+        };
+        var infowindow = new google.maps.InfoWindow({
+            content: 
+                '<div style="font-size: 0.9em;">'+
+                    '<b><?=__('Name');?></b>: '+clinic.name+'<br/>'+
+                    '<b><?=__('Address');?></b>: '+clinic.address+'<br/>'+
+                '</div>'
+        });
+        var latlng = new google.maps.LatLng(clinic.latitude,clinic.longitude);
+        
+        var marker = new google.maps.Marker({
+            title: 'Hello World!',
+            position: latlng,
+            //position:{lat:45.77433690, lng:15.95949510},
+            map:clinicsMap.gmap
+        });
+       
+        marker.addListener('click', function() {
+            infowindow.open(clinicsMap.gmap, marker);
+        });
+    });
+}
+
+ 
+
     

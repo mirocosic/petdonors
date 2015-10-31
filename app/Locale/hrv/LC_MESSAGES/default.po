@@ -243,3 +243,24 @@ msgstr "Kreirati novu akciju sa ovim donorima?"
 
 msgid "Donors map"
 msgstr "Karta donora"
+
+msgid "New clinic"
+msgstr "Nova ambulanta"
+
+msgid "Clinics map"
+msgstr "Karta ambulanti"
+
+msgid "New donor"
+msgstr "Novi donor"
+
+msgid "New action"
+msgstr "Nova akcija"
+
+msgid "City"
+msgstr "Grad"
+
+msgid "Search donors"
+msgstr "Pretraga donora"
+
+msgid "Contact oib"
+msgstr "OIB"

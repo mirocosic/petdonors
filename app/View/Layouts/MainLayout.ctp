@@ -21,7 +21,7 @@
         
         <!-- load custom css overrides -->
         <link rel="stylesheet" href="/css/styles.css"/>
-        
+           
         
         
     </head>
@@ -75,13 +75,14 @@ Ext.onReady(function() {
         proxy: {
             type: 'memory',
             data: {
-                success: true,
+                //success: true,
                 children: [
                 {
                     text: '<?=__("Home");?>',
                     glyph: 'xf1e3@FontAwesome',
                     iconCls: 'fa-building',
-                    leaf: false, // this is a branch   
+                    leaf: true, // this is a branch   
+                    expanderOnly: false,
                     expanded: false,
                     children: [{
                         text: 'Mercedes-Benz',
@@ -98,20 +99,20 @@ Ext.onReady(function() {
                     text:'<?=__('Actions');?>',
                     iconCls:'fa-flash',
                     expanded:false,
-                    leaf:false,
+                    leaf:true,
                     href:'/events'
                 },{
                     text:'<?=__('Donors');?>',
                     
                     iconCls: 'fa-tint',
                     expanded:false,
-                    leaf:false,
+                    leaf:true,
                     href:'/donors',
                     children: [{
                         text: '<?=__('Search');?>',
                         iconCls:'fa-search',
                         leaf: true,
-                        href:'/donors'
+                        href:'/donors/search'
                     }, {
                         text: '<?=__('New');?>',
                         iconCls:'fa-plus',
@@ -122,12 +123,12 @@ Ext.onReady(function() {
                    text: '<?=__("Clinics");?>',
                    iconCls:'fa-hospital',
                    href:'/clinics',
-                   leaf: false,
+                   leaf: true,
                    expanded: false,
                 },{
                    text: '<?=__("Vets");?>',
                    iconCls:'fa-user-md',
-                   leaf: false,
+                   leaf: true,
                    expanded: false,
                    href:'/users'
                 },{
@@ -135,6 +136,7 @@ Ext.onReady(function() {
                     iconCls: 'fa-cogs',
                     href:'/settings',
                     expanded: false,
+                    leaf:true,
                     children:[
                         {text:'Miro',leaf:true},
                         {text:'Pero',leaf:true}
@@ -142,6 +144,7 @@ Ext.onReady(function() {
                 },{
                     text:'<?=__("Logout");?>',
                     iconCls: 'fa-sign-out',
+                    leaf:true,
                     expanded: false,
                     href:'/users/logout'
                 }]
@@ -182,7 +185,7 @@ Ext.onReady(function() {
                 rootVisible: false,
                 bufferedRenderer: false,
                 animate: true,
-                cls:'menuTree'
+                cls:'menuTree',
                 
             }]
         },{

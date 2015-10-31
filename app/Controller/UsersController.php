@@ -105,7 +105,7 @@
     
     function index(){
         $this->layout = 'MainLayout';
-        $this->set('loadedModule','usersTab');
+        $this->set('loadedModule','usersGrid');
         $this->render('/Modules/Users');
     }
     

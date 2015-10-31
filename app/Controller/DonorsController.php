@@ -54,6 +54,7 @@
         
         $saveData['Donor']['name'] = trim($this->request->data['Donor_name']);
         $saveData['Donor']['address'] = trim($this->request->data['Donor_address']);
+        $saveData['Donor']['city'] = trim($this->request->data['Donor_city']);
         $saveData['Donor']['contact_name'] = trim($this->request->data['Donor_contact_name']);
         $saveData['Donor']['contact_number'] = trim($this->request->data['Donor_contact_number']);
         $saveData['Donor']['contact_mail'] = trim($this->request->data['Donor_contact_mail']);
@@ -64,10 +65,16 @@
         $date_of_birth = date_create_from_format('d.m.Y',$this->request->data['Donor_date_of_birth']); 
         $saveData['Donor']['date_of_birth'] = $date_of_birth->format('Y-m-d');
         
+        $last_donation = date_create_from_format('d.m.Y',$this->request->data['Donor_last_donation']); 
+        $saveData['Donor']['last_donation'] = $last_donation->format('Y-m-d');
+        
+        $saveData['Donor']['age'] = date_diff(date_create($date_of_birth->format('Y-m-d')), date_create('today'))->y;
+        
         $saveData['Donor']['vaccinated'] = $this->request->data['Donor_vaccinated'];
         $saveData['Donor']['microchipped'] = $this->request->data['Donor_microchipped'];
         
         //to do
+        
         //$saveData['Donor']['last_modified_by'] = AuthComponent::user('id');
         
         if ($this->Donor->saveAll($saveData)){

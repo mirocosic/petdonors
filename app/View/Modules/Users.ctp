@@ -10,7 +10,7 @@ var usersStore = Ext.create('Ext.data.Store',{
         {name:'Clinic.id',mapping:'Clinic[0].id'},
         {name:'Clinic.name',mapping:'Clinic[0].name'},
         {name:'ClinicMembership.id',mapping:'ClinicMembership[0].id'},
-        {name:'ClinicMembership.clinic_id',mapping:'ClinicMembership[0].clinic_id'},
+        {name:'ClinicMembership.clinic_id',mapping:'ClinicMembership[0].clinic_id'}
         
 
     ],
@@ -40,10 +40,9 @@ var clinicsStore = Ext.create('Ext.data.Store',{
     autoLoad: true
 });
 
-var usersTab = new Ext.panel.Panel({
+var usersGrid = new Ext.grid.GridPanel({
         title: '<?= __("Vets");?>',
         glyph: 'xf0f0@FontAwesome',
-        items:[{
             xtype:'grid',
             store:usersStore,
             columns: [
@@ -174,70 +173,88 @@ var usersTab = new Ext.panel.Panel({
                     }
                 }
                             
-            ]
-        },{
-            xtype:'button',
-            margin: '20 0 0 20',
-            text:"<?=__('Create');?>",
-            glyph:'xf067@FontAwesome',
-            handler:function(){
-                var userEditWindow = Ext.create('Ext.window.Window',{
-                    title:"<?=__('Create new user');?>",
-                    width: 300,
-                    items: [{
-                        xtype:"form",
-                        id:"userDataForm",
-                        defaults: {
-                            xtype:'textfield',
-                            padding: "10 10 0 10",
-                            allowBlank: false
-                        },
-                        items:[{
-                            fieldLabel:"<?=__('Name');?>",
-                            name: 'User.name'    
-                        },{
-                            name:'User.surname',
-                            fieldLabel:"<?=__('Surname');?>",
-                        },{
-                            name:"User.mail",
-                            fieldLabel:"<?=__('Mail');?>"
-                        },{
-                            name:"User.username",
-                            fieldLabel:"<?=__('Username');?>"
-                        },{
-                            name:'User.password',
-                            fieldLabel:"<?=_('Password');?>"
-                            
-                        },{
-                            name:"User.oib",
-                            fieldLabel:"<?=__('OIB');?>",
-                            allowBlank: true
-                        }],
-                        buttons:[{
-                            formBind: true,
-                            text:"<?=__('Save');?>",
-                            handler: function(){
-                                userEditWindow.items.get('userDataForm').getForm().submit({
-                                    url: '/users/edit',
-                                    success: function (form, action) {
-                                        Ext.Msg.alert("<?=__('Saved');?>", action.result.message);
-                                        usersStore.load();  
-                                        userEditWindow.close();
-                                    },
-                                    failure: function (form, action) {
-                                        Ext.Msg.alert("<?=__('Error');?>", action.result.message);
-                                    }
-                                });
-                            }
-                        },{
-                            text:"<?=__('Delete');?>"
+            ],
+            tbar:[{
+                xtype:'button',
+                text:"<?=__('Create');?>",
+                glyph:'xf067@FontAwesome',
+                handler:function(){
+                    var userEditWindow = Ext.create('Ext.window.Window',{
+                        title:"<?=__('Create new user');?>",
+                        width: 300,
+                        items: [{
+                            xtype:"form",
+                            id:"userDataForm",
+                            defaults: {
+                                xtype:'textfield',
+                                padding: "10 10 0 10",
+                                allowBlank: false
+                            },
+                            items:[{
+                                fieldLabel:"<?=__('Name');?>",
+                                name: 'User.name'    
+                            },{
+                                name:'User.surname',
+                                fieldLabel:"<?=__('Surname');?>",
+                            },{
+                                name:"User.mail",
+                                fieldLabel:"<?=__('Mail');?>"
+                            },{
+                                name:"User.username",
+                                fieldLabel:"<?=__('Username');?>"
+                            },{
+                                name:'User.password',
+                                fieldLabel:"<?=_('Password');?>"
+
+                            },{
+                                name:"User.oib",
+                                fieldLabel:"<?=__('OIB');?>",
+                                allowBlank: true,
+                                hidden:true
+                            },{
+                                xtype:'combobox',
+                                store:clinicsStore,
+                                displayField:"Clinic.name",
+                                valueField:'Clinic.id',
+                                name:'ClinicMembership.clinic_id',
+                                fieldLabel:"<?=__('Clinic');?>",
+                            }],
+                            buttons:[{
+                                formBind: true,
+                                text:"<?=__('Save');?>",
+                                handler: function(){
+                                    userEditWindow.items.get('userDataForm').getForm().submit({
+                                        url: '/users/edit',
+                                        success: function (form, action) {
+                                            Ext.Msg.alert("<?=__('Saved');?>", action.result.message);
+                                            usersStore.load();  
+                                            userEditWindow.close();
+                                        },
+                                        failure: function (form, action) {
+                                            Ext.Msg.alert("<?=__('Error');?>", action.result.message);
+                                        }
+                                    });
+                                }
+                            },{
+                                text:"<?=__('Delete');?>"
+                            }]
+
                         }]
-
-                    }]
-                 });
-
-               // userEditWindow.items.get('userDataForm').getForm().loadRecord(record);
-                userEditWindow.show();
-            }
-        }]
+                     });
+                    userEditWindow.show();
+                }
+            }],
+             dockedItems: [{
+                xtype: 'pagingtoolbar',
+                dock: 'bottom',
+                //plugins: {ptype: 'pagesize', displayText: 'Donora po stranici'},
+                //pageSize: 10,
+                beforePageText: 'Stranica',
+                afterPageText: 'od {0}',
+                store: clinicsStore,
+                displayInfo: true,
+                displayMsg: '<?=__('Vets {0} - {1} of {2}')?>',
+                emptyMsg: "<?=__('Nema veta')?>"
+            }]
+     
     });

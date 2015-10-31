@@ -98,6 +98,7 @@ html,body {
 .menuTree .x-grid-cell-inner:hover {
     color: white;
     cursor:pointer;
+    background-color: #3f505f;
 }
 
 .menuTree .x-grid-cell-inner a{
@@ -118,6 +119,10 @@ html,body {
 
 .MainTitle .x-title{
     font-size: 20px;
+}
+
+.x-grid-cell-inner-treecolumn {
+    padding: 10px 0 10px 0;
 }
 
 

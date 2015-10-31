@@ -10,14 +10,14 @@
     
     function index(){
         $this->layout = 'MainLayout';
-        $this->set('loadedModule','clinicsTab');
+        $this->set('loadedModule','clinicsGrid');
         $this->render('/Modules/Clinics');
     }
     
     public function getClinics(){
        
         $clinics = $this->Clinic->find('all',[
-            'fields'=>['Clinic.id','Clinic.name','Clinic.address']
+            'fields'=>['Clinic.id','Clinic.name','Clinic.address','Clinic.latitude','Clinic.longitude']
         ]);
       
         return json_encode($clinics);
@@ -39,6 +39,9 @@
         
         $saveData['Clinic']['name'] = trim($this->request->data['Clinic_name']);
         $saveData['Clinic']['address'] = trim($this->request->data['Clinic_address']);
+        $saveData['Clinic']['city'] = trim($this->request->data['Clinic_city']);
+        $saveData['Clinic']['latitude'] = trim($this->request->data['Clinic_latitude']);
+        $saveData['Clinic']['longitude'] = trim($this->request->data['Clinic_longitude']);
        
         if ($this->Clinic->saveAll($saveData)){
             $response['success'] = true;
