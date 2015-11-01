@@ -264,3 +264,12 @@ msgstr "Pretraga donora"
 
 msgid "Contact oib"
 msgstr "OIB"
+
+msgid "Donor signup"
+msgstr "Prijava donora"
+
+msgid "Submit"
+msgstr "Pošalji"
+
+msgid "Login successful!"
+msgstr "Prijava uspješna!"

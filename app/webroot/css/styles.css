@@ -1,5 +1,6 @@
 html,body {
     height:100%;
+   
 }
 
 .treelist-with-nav  .x-panel-body {
@@ -124,6 +125,34 @@ html,body {
 .x-grid-cell-inner-treecolumn {
     padding: 10px 0 10px 0;
 }
+
+.form-control {
+    margin: 5px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fefefe;
+     text-shadow : none;
+      transition: color 0.5s;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    
+    transition: color 0.5s;
+}
+.navbar-default .navbar-nav>li:hover{
+    background-color: #729EAD;
+    
+}
+
+
+.navbar-default {
+    background-image: none;
+    background-color: lightblue;
+   
+}
+
 
 
      

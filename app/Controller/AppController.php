@@ -49,7 +49,7 @@ class AppController extends Controller {
                 'controller' => 'users',
                 'action' => 'login'
             ),
-            'loginRedirect' => '/',
+            'loginRedirect' => '/home',
         )
     );
     

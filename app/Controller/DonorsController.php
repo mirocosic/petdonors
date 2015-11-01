@@ -2,7 +2,24 @@
     
      public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index');
+        $this->Auth->allow('signup');
+    }
+    
+    function signup(){
+        $this->layout = 'External';
+        
+        if (empty($this->request->data)){
+            return;
+        }
+        
+        if ($this->Donor->save($this->request->data)){
+            $this->redirect('/donors/thankyou');
+        }
+    }
+    
+    function thankyou(){
+        $this->layout = 'External';
+        
     }
     
     function index(){

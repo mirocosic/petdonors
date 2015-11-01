@@ -16,7 +16,7 @@
             if ($this->Auth->login()) {
                // return $this->redirect($this->Auth->redirectUrl());
                $response['success'] = true;
-               $response['message'] = 'Login successful!';
+               $response['message'] = __('Login successful!');
                $response['redirect'] = $this->Auth->redirectUrl();
                return json_encode($response);
             } else {
