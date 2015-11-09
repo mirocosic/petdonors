@@ -14634,3 +14634,75 @@ Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
 Stack Trace:
 #0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-11-04 19:34:28 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-04 19:34:28 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-04 19:34:29 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-04 19:34:29 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-04 19:41:34 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-04 19:41:34 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.woff?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-04 19:41:35 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-04 19:41:35 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /fonts/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf?32940503=
+Stack Trace:
+#0 C:\Users\Miro\Documents\NetBeansProjects\PetDonors\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

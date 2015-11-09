@@ -2,6 +2,6 @@
 /app/webroot/ext-themes
 /app/webroot/js/ext
 /app/webroot/js/ext.ux
-app/tmp/logs/error.log
-app/tmp/logs/Language.log
-nbproject/private/private.xml
+/app/tmp/logs/error.log
+/app/tmp/logs/Language.log
+/nbproject/private/private.xml
