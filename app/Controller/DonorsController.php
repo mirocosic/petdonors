@@ -1,8 +1,10 @@
 <?php class DonorsController extends AppController {
     
+     var $uses = ['User','Group'];
+    
      public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('signup');
+       // $this->Auth->allow('signup');
     }
     
     function signup(){

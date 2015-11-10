@@ -69,10 +69,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="content">
 
 			<?php echo $this->Flash->render(); ?>
-                        <?php echo $this->Html->link('Eng', array('language'=>'eng')); ?>
-                        <?php echo $this->Html->link('Hrv', array('language'=>'hrv')); ?>
-                        <?php echo $this->Html->link('Login', array('controller'=>'users','action'=>'login')); ?>
-                        <?php echo $this->Html->link('Logout', array('controller'=>'users','action'=>'logout')); ?>
+                    <h2> <?php echo $this->Html->link('Povratak', $this->request->referer()); ?></h2>
+                    <br/>
+                      
                         
 			<?php echo $this->fetch('content'); ?>
 		</div>

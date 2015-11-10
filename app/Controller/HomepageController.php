@@ -2,7 +2,7 @@
     
     public function beforeFilter() {
         parent::beforeFilter();
-        //$this->Auth->allow('index');
+        $this->Auth->allow('index');
     }
     
     function index(){
@@ -11,8 +11,6 @@
     
     function home(){
         $this->layout = 'MainLayout';
-       // $this->autoRender = false;
         $this->set('loadedModule','');
-        //echo 'This is Homepage!';
     }
 }

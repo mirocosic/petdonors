@@ -56,7 +56,7 @@ class AppController extends Controller {
    function beforeFilter() {
        
        // remove after testing
-        $this->Auth->allow();
+       // $this->Auth->allow();
        
         $this->Auth->unauthorizedRedirect = false;
         $this->Auth->authError = "Access Denied";
@@ -66,9 +66,6 @@ class AppController extends Controller {
         //$this->Auth->logoutRedirect = array( 'controller' => 'static', 'action' => 'index', 'language'=>$this->Session->read('Config.language'));
         //$this->Auth->loginRedirect = array( 'controller' => 'static', 'action' => 'dashboard', 'language'=>$this->Session->read('Config.language'));
         //this->Auth->loginAction = array( 'controller'=>'users', 'action'=>'login', 'language'=>$this->Session->read('Config.language'));
-        
-        
-       
     }
     
     private function _setLanguage() {
@@ -88,8 +85,6 @@ class AppController extends Controller {
             $this->Session->write('Config.language', Configure::read('Config.Language'));
             $this->Cookie->write('lang', Configure::read('Config.Language'), false, '20 days');
         }
-        
-         
         
         if (isset($this->params['language'])) {
            
