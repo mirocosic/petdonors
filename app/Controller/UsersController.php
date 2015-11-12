@@ -72,13 +72,9 @@
         $saveData['User']['mail'] = trim($this->request->data['User_mail']);
         $saveData['User']['username'] = trim($this->request->data['User_username']);
         $saveData['User']['oib'] = trim($this->request->data['User_oib']);
+        $saveData['User']['group_id'] = 2;
         
-        $save['ClinicMembership']['id'] = $this->request->data['ClinicMembership_id'];
-        $save['ClinicMembership']['user_id'] = $this->request->data['User_id'];
-        $save['ClinicMembership']['clinic_id'] = $this->request->data['ClinicMembership_clinic_id'];
-        
-        
-        $this->ClinicMembership->save($save);
+       
         // return json_encode($this->request->data);
         
         
@@ -92,6 +88,12 @@
        
         
         if ($this->User->saveAll($saveData)){
+            
+            $save['ClinicMembership']['id'] = $this->request->data['ClinicMembership_id'];
+            $save['ClinicMembership']['user_id'] = $this->User->id;
+            $save['ClinicMembership']['clinic_id'] = $this->request->data['ClinicMembership_clinic_id'];
+            $this->ClinicMembership->save($save);
+        
             $response['success'] = true;
             $response['message'] = __('User successfully saved.');
         } else {

@@ -5,3 +5,7 @@
 /app/tmp/logs/error.log
 /app/tmp/logs/Language.log
 /nbproject/private/private.xml
+app/tmp/logs/error.log
+app/tmp/logs/512.log
+app/tmp/logs/Language.log
+nbproject/private/private.xml

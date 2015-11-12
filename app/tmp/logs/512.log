@@ -1411,3 +1411,565 @@ Aro: Array
 )
 
 Aco: controllers/Donors/getDonors
+2015-11-11 20:31:16 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Events/index
+2015-11-11 20:31:21 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Donors/getDonors
+2015-11-11 20:31:24 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Clinics/index
+2015-11-11 20:31:28 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Donors/getDonors
+2015-11-11 20:31:42 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Users/index
+2015-11-11 20:31:53 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Donors/getDonors
+2015-11-11 20:33:11 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Users/index
+2015-11-11 20:33:16 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Donors/getDonors
+2015-11-11 20:36:01 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Users/index
+2015-11-11 20:37:51 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Users/getUsers
+2015-11-11 20:37:51 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Clinics/getClinics
+2015-11-11 20:38:07 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Clinics/getClinics
+2015-11-11 20:41:03 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Clinics/getClinics
+2015-11-11 20:43:02 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Clinics/getClinics
+2015-11-11 20:43:09 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Users/edit
+2015-11-11 20:43:17 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Users/edit
+2015-11-11 20:47:37 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Clinics/index
+2015-11-11 20:48:50 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Clinics/getClinics
+2015-11-11 20:49:45 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Clinics/getClinics
+2015-11-11 20:51:51 512: DbAcl::check() - Failed ACO node lookup in permissions check. Node references:
+Aro: Array
+(
+    [User] => Array
+        (
+            [id] => 5
+            [created] => 2015-09-01 05:11:52
+            [modified] => 2015-10-27 19:11:57
+            [username] => miro
+            [mail] => miro@maidea.hr
+            [name] => Miro2
+            [surname] => Ćosić
+            [role] => 
+            [group_id] => 1
+            [oib] => 
+            [Group] => Array
+                (
+                    [id] => 1
+                    [name] => Administrators
+                    [created] => 2015-09-01 03:33:21
+                    [modified] => 2015-09-01 03:33:21
+                )
+
+        )
+
+)
+
+Aco: controllers/Donors/getDonors
+2015-11-11 20:56:58 512: DbAcl::allow() - Invalid node
+2015-11-11 21:03:54 512: DbAcl::allow() - Invalid node

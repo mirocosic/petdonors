@@ -30,7 +30,12 @@
     public function addAco() {
         $this->layout = false;
         $this->autoRender = false;
-        $this->Acl->Aco->create(array('parent_id' => 6, 'alias' => 'home'));
+        //create aco controller
+        //$this->Acl->Aco->create(array('parent_id' => 1, 'alias' => 'get'));
+        //create aco actions
+        $this->Acl->Aco->create(array('parent_id' => 4, 'alias' => 'getDonors'));
+         
+        
         if ($this->Acl->Aco->save()){
             return 'Success!';
         } else {
@@ -41,7 +46,7 @@
    function addPerm(){
        $this->layout = false;
        $this->autoRender = false;
-       $this->Acl->allow('Users', 'homepage');
+       $this->Acl->allow('Users', 'homepage/home');
 
    }
 }
