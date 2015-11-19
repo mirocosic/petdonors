@@ -142,83 +142,117 @@ var donorsGrid = new Ext.grid.GridPanel({
                             var record = widgetColumn.getWidgetRecord();
                             var donorEditWindow = Ext.create('Ext.window.Window',{
                                 title:'Donor id = '+record.data.Donor.id,
-                                width: 300,
+                                autoShow: true,
+                                autoScroll: true,
                                 //height: 300,
                                 items: [{
                                     xtype:"form",
                                     id:"donorDataForm",
-                                    defaults: {
-                                        xtype:'textfield',
-                                        padding: "10 10 0 10",
-                                        allowBlank: false,
-                                        blankText:"Warning!"
-                                    },
+                                    pollForChanges: true,
+                                    autoScroll: true,
+
                                     items:[{
-                                            xtype:"hidden",
-                                            name:"Donor.id"
-                                    },{
-                                        fieldLabel:"<?=__('Name');?>",
-                                        name: 'Donor.name'    
-                                    },{
-                                        name:"Donor.address",
-                                        fieldLabel:"<?=__('Address');?>"
-                                    },{
-                                        name:"Donor.city",
-                                        fieldLabel:"<?=__('City');?>"
-                                    },{
-                                        name:"Donor.contact_name",
-                                        fieldLabel:"<?=__('Contact name');?>"
-                                    },{
-                                        name:"Donor.contact_number",
-                                        fieldLabel:"<?=__('Contact number');?>"
-                                    },{
-                                        name:'Donor.contact_mail',
-                                        fieldLabel:"<?=__('Contact mail');?>",
-                                        allowBlank: true
-                                    },{
-                                        name:'Donor.contact_oib',
-                                        fieldLabel:"<?=__('Contact oib');?>",
-                                        allowBlank: true
-                                    },{
-                                        xtype:'combobox',
-                                        name:"Donor.gender",
-                                        fieldLabel:"<?=__('Gender');?>",
-                                        allowBlank: true,
-                                        displayField:'name',
-                                        valueField:'abbr',
-                                        store: genderStore
-                                    },{
-                                        xtype:'combobox',
-                                        name:"Donor.vaccinated",
-                                        fieldLabel:"<?=__('Vaccinated');?>",
-                                        allowBlank: true,
-                                        displayField:'name',
-                                        valueField:'abbr',
-                                        store: trueStore
-                                    },{
-                                        xtype:'combobox',
-                                        name:"Donor.microchipped",
-                                        fieldLabel:"<?=__('Microchipped');?>",
-                                        allowBlank: true,
-                                        displayField:'name',
-                                        valueField:'abbr',
-                                        store: trueStore
-                                    },{
-                                        name:"Donor.date_of_birth",
-                                        fieldLabel:"<?=__('Date of birth');?>",
-                                        xtype: 'datefield',
-                                        format:'d.m.Y',
-                                    },{
-                                        name:"Donor.last_donation",
-                                        fieldLabel:"<?=__('Donated');?>",
-                                        xtype: 'datefield',
-                                        format:'d.m.Y',
-                                    },{
-                                        name:'Donor.weight',
-                                        fieldLabel:"<?=__('Weight');?>  (kg)"
-                                    }],
+                                        xtype:'container',
+                                        layout:'hbox',
+                                        items:[{
+                                            xtype:'fieldset',
+                                            layout:'vbox',
+                                            title:'Podaci o peseku',
+                                            margin:'0 0 10px 10px',
+                                            defaults: {
+                                                xtype:'textfield',
+                                                 padding:'0 0 0 0',
+
+                                                allowBlank: false,
+                                                blankText:"Obavezno polje",
+                                                msgTarget: 'side'
+                                            },
+                                            items:[{
+                                                xtype:"hidden",
+                                                name:"Donor.id"
+                                            },{
+                                                fieldLabel:"<?=__('Name');?>",
+                                                name: 'Donor.name'    
+                                            },{
+                                                name:"Donor.address",
+                                                fieldLabel:"<?=__('Address');?>"
+                                            },{
+                                                name:"Donor.city",
+                                                fieldLabel:"<?=__('City');?>"
+                                            },{
+                                                xtype:'combobox',
+                                                name:"Donor.gender",
+                                                fieldLabel:"<?=__('Gender');?>",
+                                                allowBlank: true,
+                                                displayField:'name',
+                                                valueField:'abbr',
+                                                store: genderStore
+                                            },{
+                                                xtype:'combobox',
+                                                name:"Donor.vaccinated",
+                                                fieldLabel:"<?=__('Vaccinated');?>",
+                                                allowBlank: true,
+                                                displayField:'name',
+                                                valueField:'abbr',
+                                                store: trueStore
+                                            },{
+                                                xtype:'combobox',
+                                                name:"Donor.microchipped",
+                                                fieldLabel:"<?=__('Microchipped');?>",
+                                                allowBlank: true,
+                                                displayField:'name',
+                                                valueField:'abbr',
+                                                store: trueStore
+                                            },{
+                                                name:"Donor.date_of_birth",
+                                                fieldLabel:"<?=__('Date of birth');?>",
+                                                 blankText:'obavezno polje',
+                                                xtype: 'datefield',
+                                                format:'d.m.Y',
+                                            },{
+                                                name:"Donor.last_donation",
+                                                fieldLabel:"<?=__('Donated');?>",
+                                                allowBlank: true,
+                                                blankText:'obavezno polje',
+                                                xtype: 'datefield',
+                                                format:'d.m.Y',
+                                            },{
+                                                name:'Donor.weight',
+                                                fieldLabel:"<?=__('Weight');?> (kg)"
+                                            }]
+                                        },{ 
+                                            xtype:'fieldset',
+                                            layout:'vbox',
+                                            margin: '0 10px 0 10px',
+                                            title:'Podaci o vlasniku',
+                                            defaults: {
+                                                xtype:'textfield',
+                                                //padding: "10 10 0 10",
+                                                padding:'0 0 0 0',
+                                                allowBlank: false,
+                                                blankText:"Obavezno polje",
+                                                msgTarget: 'side'
+                                            },
+                                            items:[{
+                                                name:"Donor.contact_name",
+                                                fieldLabel:"<?=__('Contact name');?>"
+                                            },{
+                                                name:"Donor.contact_number",
+                                                fieldLabel:"<?=__('Contact number');?>"
+                                            },{
+                                                name:'Donor.contact_mail',
+                                                fieldLabel:"<?=__('Contact mail');?>",
+                                                allowBlank: true
+                                            },{
+                                                name:'Donor.contact_oib',
+                                                fieldLabel:"<?=__('Contact oib');?>",
+                                                allowBlank: true
+                                            }]
+                                        }]
+                                        } 
+                                    ],
                                     buttons:[{
-                                        formBind: true,
+                                       // formBind: true,
                                         text:"<?=__('Save');?>",
                                         handler: function(){
                                             donorEditWindow.items.get('donorDataForm').getForm().submit({
@@ -233,31 +267,8 @@ var donorsGrid = new Ext.grid.GridPanel({
                                                 }
                                             });
                                         }
-                                    },{
-                                        text:"<?=__('Delete');?>",
-                                          handler: function(){
-                                            Ext.MessageBox.confirm("<?=__('Are you sure?');?>","<?=__('Delete donor ');?>"+record.data.Donor.name+"?",function(){
-                                                Ext.Ajax.request({
-                                                    url: '/donors/delete',
-                                                    params: {donor_id: record.data.Donor.id},
-                                                    success: function (response, opts) {
-                                                        var obj = Ext.decode(response.responseText);
-                                                        if (obj.success == true){
-                                                            Ext.Msg.alert("<?=__('Deleted');?>",obj.message); 
-                                                        } else {
-                                                            Ext.Msg.alert("<?=__('Error');?>",obj.message);
-                                                        }
-                                                        donorEditWindow.close();
-                                                        donorsStore.load();
-                                                    },
-                                                    failure: function (response, opts) {
-                                                        Ext.Msg.alert("<?=__('Error');?>",response.message);
-                                                    }
-                                                });
-                                            })
-                                        }
                                     }]
-                                        
+
                                 }]
                              })
                             donorEditWindow.items.get('donorDataForm').getForm().loadRecord(record);
@@ -371,24 +382,38 @@ var donorsGrid = new Ext.grid.GridPanel({
                 text:'<?=__("New donor");?>',
                 glyph:'xf067@FontAwesome',
                 handler:function(){
-                    
                     var donorEditWindow = Ext.create('Ext.window.Window',{
-                                title:'<?=__('New donor');?>',
-                                width: 300,
-                                autoShow: true,
-                                //height: 300,
-                                items: [{
-                                    xtype:"form",
-                                    id:"donorDataForm",
+                        title:'<?=__('New donor');?>',
+                         glyph:'xf067@FontAwesome',
+                        //width: 350,
+                        autoShow: true,
+                        autoScroll: true,
+                        //height: 300,
+                        items: [{
+                            xtype:"form",
+                            id:"donorDataForm",
+                            pollForChanges: true,
+                            autoScroll: true,
+
+                            items:[{
+                                xtype:'container',
+                                layout:'hbox',
+                                items:[{
+                                    xtype:'fieldset',
+                                    layout:'vbox',
+                                    title:'Podaci o peseku',
+                                    margin:'0 0 10px 10px',
                                     defaults: {
                                         xtype:'textfield',
-                                        padding: "10 10 0 10",
+                                         padding:'0 0 0 0',
+
                                         allowBlank: false,
-                                        blankText:"Warning!"
+                                        blankText:"Obavezno polje",
+                                        msgTarget: 'side'
                                     },
                                     items:[{
-                                            xtype:"hidden",
-                                            name:"Donor.id"
+                                        xtype:"hidden",
+                                        name:"Donor.id"
                                     },{
                                         fieldLabel:"<?=__('Name');?>",
                                         name: 'Donor.name'    
@@ -398,20 +423,6 @@ var donorsGrid = new Ext.grid.GridPanel({
                                     },{
                                         name:"Donor.city",
                                         fieldLabel:"<?=__('City');?>"
-                                    },{
-                                        name:"Donor.contact_name",
-                                        fieldLabel:"<?=__('Contact name');?>"
-                                    },{
-                                        name:"Donor.contact_number",
-                                        fieldLabel:"<?=__('Contact number');?>"
-                                    },{
-                                        name:'Donor.contact_mail',
-                                        fieldLabel:"<?=__('Contact mail');?>",
-                                        allowBlank: true
-                                    },{
-                                        name:'Donor.contact_oib',
-                                        fieldLabel:"<?=__('Contact oib');?>",
-                                        allowBlank: true
                                     },{
                                         xtype:'combobox',
                                         name:"Donor.gender",
@@ -439,60 +450,71 @@ var donorsGrid = new Ext.grid.GridPanel({
                                     },{
                                         name:"Donor.date_of_birth",
                                         fieldLabel:"<?=__('Date of birth');?>",
+                                         blankText:'obavezno polje',
                                         xtype: 'datefield',
                                         format:'d.m.Y',
                                     },{
                                         name:"Donor.last_donation",
                                         fieldLabel:"<?=__('Donated');?>",
+                                        allowBlank: true,
+                                        blankText:'obavezno polje',
                                         xtype: 'datefield',
                                         format:'d.m.Y',
                                     },{
                                         name:'Donor.weight',
                                         fieldLabel:"<?=__('Weight');?> (kg)"
-                                    }],
-                                    buttons:[{
-                                        formBind: true,
-                                        text:"<?=__('Save');?>",
-                                        handler: function(){
-                                            donorEditWindow.items.get('donorDataForm').getForm().submit({
-                                                url: '/donors/edit',
-                                                success: function (form, action) {
-                                                    Ext.Msg.alert("<?=__('Saved');?>", action.result.message);
-                                                    donorsStore.load();  
-                                                    donorEditWindow.close();
-                                                },
-                                                failure: function (form, action) {
-                                                    Ext.Msg.alert("<?=__('Error');?>", action.result.message);
-                                                }
-                                            });
-                                        }
-                                    },{
-                                        text:"<?=__('Delete');?>",
-                                          handler: function(){
-                                            Ext.MessageBox.confirm("<?=__('Are you sure?');?>","<?=__('Delete donor ');?>"+record.data.Donor.name+"?",function(){
-                                                Ext.Ajax.request({
-                                                    url: '/donors/delete',
-                                                    params: {donor_id: record.data.Donor.id},
-                                                    success: function (response, opts) {
-                                                        var obj = Ext.decode(response.responseText);
-                                                        if (obj.success == true){
-                                                            Ext.Msg.alert("<?=__('Deleted');?>",obj.message); 
-                                                        } else {
-                                                            Ext.Msg.alert("<?=__('Error');?>",obj.message);
-                                                        }
-                                                        donorEditWindow.close();
-                                                        donorsStore.load();
-                                                    },
-                                                    failure: function (response, opts) {
-                                                        Ext.Msg.alert("<?=__('Error');?>",response.message);
-                                                    }
-                                                });
-                                            })
-                                        }
                                     }]
-                                        
+                                },{ 
+                                    xtype:'fieldset',
+                                    layout:'vbox',
+                                    margin: '0 10px 0 10px',
+                                    title:'Podaci o vlasniku',
+                                    defaults: {
+                                        xtype:'textfield',
+                                        //padding: "10 10 0 10",
+                                        padding:'0 0 0 0',
+                                        allowBlank: false,
+                                        blankText:"Obavezno polje",
+                                        msgTarget: 'side'
+                                    },
+                                    items:[{
+                                        name:"Donor.contact_name",
+                                        fieldLabel:"<?=__('Contact name');?>"
+                                    },{
+                                        name:"Donor.contact_number",
+                                        fieldLabel:"<?=__('Contact number');?>"
+                                    },{
+                                        name:'Donor.contact_mail',
+                                        fieldLabel:"<?=__('Contact mail');?>",
+                                        allowBlank: true
+                                    },{
+                                        name:'Donor.contact_oib',
+                                        fieldLabel:"<?=__('Contact oib');?>",
+                                        allowBlank: true
+                                    }]
                                 }]
-                             })
+                                } 
+                            ],
+                            buttons:[{
+                               // formBind: true,
+                                text:"<?=__('Save');?>",
+                                handler: function(){
+                                    donorEditWindow.items.get('donorDataForm').getForm().submit({
+                                        url: '/donors/edit',
+                                        success: function (form, action) {
+                                            Ext.Msg.alert("<?=__('Saved');?>", action.result.message);
+                                            donorsStore.load();  
+                                            donorEditWindow.close();
+                                        },
+                                        failure: function (form, action) {
+                                            Ext.Msg.alert("<?=__('Error');?>", action.result.message);
+                                        }
+                                    });
+                                }
+                            }]
+
+                        }]
+                     })
                            
                 }
             },{ 

@@ -161,16 +161,16 @@ msgid "Address"
 msgstr "Adresa"
 
 msgid "Contact name"
-msgstr "Ime kontakta"
+msgstr "Ime vlasnika"
 
 msgid "Contact address"
-msgstr "Adresa kontakta"
+msgstr "Adresa"
 
 msgid "Contact mail"
-msgstr "Mail kontakta"
+msgstr "Mail"
 
 msgid "Contact number"
-msgstr "Broj kontakta"
+msgstr "Mobitel"
 
 msgid "Gender"
 msgstr "Spol"
@@ -215,16 +215,16 @@ msgid "Language"
 msgstr "Jezik"
 
 msgid "Vaccinated"
-msgstr "Cijepljen"
+msgstr "Cijepljen/a"
 
 msgid "Microchipped"
-msgstr "Čipiran"
+msgstr "Čipiran/a"
 
 msgid "Donations"
 msgstr "Donacije"
 
 msgid "Donated"
-msgstr "Donirao"
+msgstr "Donirao/a"
 
 msgid "Please select a donor"
 msgstr "Molimo odaberite donora"

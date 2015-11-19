@@ -216,7 +216,10 @@
  *
  */
 	Configure::write('Session', array(
-		'defaults' => 'php'
+		'defaults' => 'php',
+                'cookie'=>'PetDonors',
+                'timeout'=>480
+         
 	));
 
 /**
